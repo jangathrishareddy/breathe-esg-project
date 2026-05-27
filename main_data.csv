@@ -1,0 +1,5 @@
+category,scope,value,unit
+Diesel Fuel,Scope 1,500,l
+Electricity,Scope 2,1200,kwh
+Flight Travel,Scope 3,1500,km
+Huge Fuel Leak,Scope 1,200000,l
