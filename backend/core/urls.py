@@ -3,7 +3,7 @@ from django.urls import path
 from django.http import HttpResponse
 
 def home(request):
-    return HttpResponse("Backend running")
+    return HttpResponse("OK - Backend Running")
 
 urlpatterns = [
     path('', home),
