@@ -2,10 +2,8 @@ from django.contrib import admin
 from django.urls import path
 from django.http import JsonResponse
 
-def test_api(request):
-    return JsonResponse({"status": "API working"})
-
 urlpatterns = [
+    path('', lambda r: JsonResponse({"status": "root working"})),
     path('admin/', admin.site.urls),
-    path('api/test/', test_api),
+    path('api/', lambda r: JsonResponse({"status": "api root working"})),
 ]
