@@ -1,13 +1,11 @@
 from django.contrib import admin
-from django.urls import path, include
-from django.http import HttpResponse
+from django.urls import path
+from django.http import JsonResponse
 
-def home(request):
-    return HttpResponse("Backend Working")
+def test_api(request):
+    return JsonResponse({"status": "API working"})
 
 urlpatterns = [
-    path('', home),
-    path('test/', home),
     path('admin/', admin.site.urls),
-    path('api/', include('ingestion.urls')),
+    path('api/test/', test_api),
 ]
