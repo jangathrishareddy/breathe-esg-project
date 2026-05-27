@@ -1,9 +1,9 @@
 from django.contrib import admin
-from django.urls import path, include
+from django.urls import path
 from django.http import HttpResponse
 
 def home(request):
-    return HttpResponse("Backend is running")
+    return HttpResponse("Backend running")
 
 urlpatterns = [
     path('', home),
